@@ -11,12 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
+import ec.edu.uisek.githubclient.ui.components.RepoItem
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import ec.edu.uisek.githubclient.ui.components.RepoItem
-import ec.edu.uisek.githubclient.ui.viewmodels.RepoListViewModel
+import ec.edu.uisek.githubclient.viewmodels.RepoListViewModel
 
 @Composable
 fun RepoList(
@@ -57,10 +56,4 @@ fun RepoList(
             }
         }
     }
-}
-
-@Preview
-@Composable
-fun RepoListPreview(){
-    RepoList()
 }

@@ -24,8 +24,8 @@ import coil.compose.AsyncImage
 @Composable
 fun RepoItem (
     title: String,
-    description: String,
-    language: String,
+    description: String?,
+    language: String?,
     avatarImageUrl: String,
 ){
     Card(
@@ -54,17 +54,21 @@ fun RepoItem (
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
                 )
-                Spacer(modifier = Modifier.width(16.dp))
-                Text(
-                    text = description,
-                    style = MaterialTheme.typography.bodyMedium,
-                    maxLines = 3
+                if (description != null) {
+                    Spacer(modifier = Modifier.width(16.dp))
+                    Text(
+                        text = description,
+                        style = MaterialTheme.typography.bodyMedium,
+                        maxLines = 3
                     )
-                Spacer(modifier = Modifier.width(16.dp))
-                Text(
-                    text = language,
-                    style = MaterialTheme.typography.bodySmall,
+                }
+                if (language != null){
+                    Spacer(modifier = Modifier.width(16.dp))
+                    Text(
+                        text = language,
+                        style = MaterialTheme.typography.bodySmall,
                     )
+                }
             }
         }
     }
